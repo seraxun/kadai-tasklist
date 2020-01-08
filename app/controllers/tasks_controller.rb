@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     
     if @task.save
       flash[:success] = "Taskが正常に投稿されました"
-      redirect_to tasks_path
+      redirect_to @task
     else
       flash.now[:danger] = "Taskが投稿されませんでした"
       render :new
